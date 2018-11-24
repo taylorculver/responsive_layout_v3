@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <title>Responsive Website</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
-<body>
-<header>
-    <h1>Student Name</h1>
+<body class="wrapper">
+
+<header class="header clearfix">
+    <h1 id="home">Student Name</h1>
     <ul>
-        <li>Home</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#contact">CONTACT</a></li>
     </ul>
     <img src="images/responsive-layout-profile.png">
     <p>Hi I'm a front-end developer who loves responsive design and css. I recently finished a degree in front-end web development at Treehouse and am excited to put my skills to use!</p>
 </header>
+
 <div class="portfolio">
 
-    <h3>PORTFOLIO</h3>
+    <h3 id="portfolio">PORTFOLIO</h3>
 
     <div class="card">
         <img src="images/portfolio-1.png">
@@ -57,20 +61,22 @@
     </div>
 
 </div>
-<footer class="contact">
-    <div>
-        <h3>CONTACT</h3>
+<footer class="footer">
+    <div class="contact">
+        <h3 id="contact">CONTACT</h3>
         <p>If you are interested in chatting or want more information about what I've been working on, I'd love to hear from you!</p>
         <p>Phone <a href="tel:+1115551234">+1 (111) 555-1234</a></p>
         <p>Email <a href="mailto:email@yoursite.com">email@yoursite.com</a></p>
     </div>
-    <br>
-    <div>
+
+    <div class="nav">
         <ul>
-            <li>Student Name</li>
-            <li><a href="#">BACK TO TOP</a></li>
+            <hr>
+            <li id="student">Student Name</li>
+            <li id="backtotop"><a href="#">BACK TO TOP</a></li>
         </ul>
     </div>
+
 </footer>
 </body>
 </html>
