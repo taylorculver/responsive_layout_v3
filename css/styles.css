@@ -154,6 +154,8 @@ p {
 
 .nav #student-tablet {
     position: absolute;
+    list-style-type: none;
+    display: inline;
     left: 25px;
     padding: 20px;
 }
