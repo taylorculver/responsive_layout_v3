@@ -1,14 +1,12 @@
 /* Universal Styling Elements */
 
 * {
-    /*border-style: dotted;*/
+    /*border-style: solid;*/
     /*border-color: blue;*/
     color: #484848;
-    /*letter-spacing: 1px;*/
 }
 
 a {
-    color: #484848;
     text-decoration: none;
     letter-spacing: 1px;
 }
@@ -129,6 +127,42 @@ p {
     right: 25px;
 }
 
+.nav {
+    background: #F5F5F5;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 100px;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    list-style-type: none;
+    display: inline;
+    padding: 20px;
+}
+
+.nav hr {
+    width: 90%;
+}
+
+.nav #student-tablet {
+    position: absolute;
+    left: 25px;
+    padding: 20px;
+}
+
+.nav #tablet-nav-list {
+    position: absolute;
+    right: 25px;
+    padding: 20px;
+}
 
 /* ---- Float clearfix ---- */
 .clearfix::after {
@@ -138,22 +172,36 @@ p {
 }
 
 
-/* To view on iPad */
+/* Media Query for Mobile*/
+@media (min-width: 385px) {
+    .nav {
+        display: none; /* Remove Nav */
+    }
+}
+
+
+/* Media Query on iPad */
 @media (min-width: 768px) {
     /* For styling the header */
+
+    .header h1 {
+        padding-top: 40px;
+    }
 
     .header p {
         text-align: left;
         font-size: 1.25em;
+        width: 50%;
     }
 
     .header ul {
-        padding-bottom: 30px;
+        padding: 15px;
     }
 
     .header li {
         background: None;
         display: inline;
+        padding: 0;
     }
 
     .header img {
@@ -163,78 +211,50 @@ p {
         padding: 0px 20px 40px 20px;
     }
 
-    .contact {
-        padding-bottom: 200px;
-    }
-
-    .contact p {
-        padding-bottom: 20px;
-    }
-
-    .tablet-nav {
-        display: block;
-        background: #F5F5F5;
-        position: fixed;
-        z-index: 1000;
-        bottom: 0;
-        width: 100%;
-        padding-top: 0px;
-        padding-bottom: 100px;
-    }
-
-
-    .tablet-nav ul {
-        padding: 20px;
-        margin: 0;
-    }
-
-    .tablet-nav li {
-        list-style-type: none;
-        display: inline;
+    .portfolio h3 {
         padding: 20px;
     }
 
-
-    .mobile-nav {
-        display: none;
-    }
-
-
-    .tablet-nav #student-tablet {
-    position: absolute;
-    left: 25px;
-    }
-
-    .tablet-nav #tablet-nav-list {
-        position: absolute;
-        right: 25px;
-    }
-
-
-
-    /* For styling the content */
-    .md-column {
-        float: left;
-        width: 50%;
+    .card {
+        margin: auto;
+        display: inline-block;
+        width: 45%;
+        padding-bottom: 40px;
     }
 
     .contact p {
         font-size: 1.25em;
     }
 
-        /* ---- Float clearfix ---- */
-        .clearfix::after {
-            content: " ";
-            display: table;
-            clear: both;
+    /* Swap NavBar from Mobile to Desktop*/
+    .mobile-nav {
+        display: none; /* Remove mobile Nav */
+    }
+
+    .nav {
+        display: block; /* Show regular Nav */
     }
 
 }
 
 
-/* To view on Desktop */
+/* Media Query for Desktop */
 @media (min-width: 1024px) {
 
-/*TBD*/
+    .title h1 {
+        position: absolute;
+        float: left;
+        left: 30px;
+        top: -5px;
+    }
 
+    .title ul {
+        float: right;
+    }
+
+    .card {
+        margin: auto;
+        display: inline-block;
+        width: 30%;
+    }
 }
