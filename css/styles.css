@@ -87,15 +87,14 @@ p {
 }
 
 .contact {
-    padding: 20px 20px 75px 20px;
+    padding: 20px 20px 125px 20px;
 }
 
 .contact p {
     margin: 20px;
-    padding-bottom: 40px;
 }
 
-.nav {
+.mobile-nav {
     background: #F5F5F5;
     position: fixed;
     z-index: 1000;
@@ -105,27 +104,27 @@ p {
     padding-bottom: 65px;
 }
 
-.nav ul {
+.mobile-nav ul {
     padding: 0;
     margin: 0;
 }
 
-.nav li {
+.mobile-nav li {
     list-style-type: none;
     display: inline;
     padding: 20px;
 }
 
-.nav hr {
+.mobile-nav hr {
     width: 90%;
 }
 
-.nav #student {
+.mobile-nav #student {
     position: absolute;
     left: 25px;
 }
 
-.nav #backtotop {
+.mobile-nav #backtotop {
     position: absolute;
     right: 25px;
 }
@@ -139,20 +138,103 @@ p {
 }
 
 
+/* To view on iPad */
 @media (min-width: 768px) {
+    /* For styling the header */
 
-	.container {
-		width: 80%;
-		max-width: 1150px;
-	}
+    .header p {
+        text-align: left;
+        font-size: 1.25em;
+    }
+
+    .header ul {
+        padding-bottom: 30px;
+    }
+
+    .header li {
+        background: None;
+        display: inline;
+    }
+
+    .header img {
+        float: right;
+        height: auto;
+        width: 40%;
+        padding: 0px 20px 40px 20px;
+    }
+
+    .contact {
+        padding-bottom: 200px;
+    }
+
+    .contact p {
+        padding-bottom: 20px;
+    }
+
+    .tablet-nav {
+        display: block;
+        background: #F5F5F5;
+        position: fixed;
+        z-index: 1000;
+        bottom: 0;
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 100px;
+    }
+
+
+    .tablet-nav ul {
+        padding: 20px;
+        margin: 0;
+    }
+
+    .tablet-nav li {
+        list-style-type: none;
+        display: inline;
+        padding: 20px;
+    }
+
+
+    .mobile-nav {
+        display: none;
+    }
+
+
+    .tablet-nav #student-tablet {
+    position: absolute;
+    left: 25px;
+    }
+
+    .tablet-nav #tablet-nav-list {
+        position: absolute;
+        right: 25px;
+    }
+
+
+
+    /* For styling the content */
+    .md-column {
+        float: left;
+        width: 50%;
+    }
+
+    .contact p {
+        font-size: 1.25em;
+    }
+
+        /* ---- Float clearfix ---- */
+        .clearfix::after {
+            content: " ";
+            display: table;
+            clear: both;
+    }
 
 }
 
+
+/* To view on Desktop */
 @media (min-width: 1024px) {
 
-	.container {
-		width: 80%;
-		max-width: 1150px;
-	}
+/*TBD*/
 
 }
